@@ -17,7 +17,20 @@ DAX['return'] = np.log(DAX['close'] / DAX['close'].shift(1))
 
 # DAX[['close', 'return', 'return']].tail()
 
-DAX[['close', 'return']].plot(
-    subplots=True, style='b', figsize=(8, 5), grid=True)
+# DAX[['close', 'return']].plot(
+#     subplots=True, style='b', figsize=(8, 5), grid=True)
+
+DAX['smooth'] = pd.rolling_mean(DAX['close'], window=42)
+# DAX['252d'] = pd.rolling_mean(DAX['close'], window=152)
+
+# DAX[['close', '42d', '252d']].plot(figsize=(8, 5), grid=True)
+DAX[['close', 'smooth']].plot(figsize=(8, 5), grid=True)
+# 标签: dax_trends
+# 标题: DAX 指数以及移动平均值
+
+# import math
+# DAX['Mov_Vol'] = pd.rolling_std(DAX['return'], window=42) * math.sqrt(42)
+# DAX[['close', 'Mov_Vol', 'return']].plot(
+#     subplots=True, style='b', figsize=(8, 7), grid=True)
 
 plt.show()
