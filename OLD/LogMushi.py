@@ -10,13 +10,13 @@ if not os.path.exists(path):
     os.makedirs(path)
 
 import datetime
-begin = datetime.date(2017,9,19)
+begin = datetime.date(2018,1,10)
 end = datetime.date.today()
 
 for i in range((end - begin).days+1):
     day = begin + datetime.timedelta(days=i)
 
-    if day == "2018-01-15":
+    if str(day) == "2018-01-15":
         print (str(day) + "该文件编码错误 跳过")
         continue
 
