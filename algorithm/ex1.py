@@ -18,8 +18,7 @@ def reverse(start, end):
 
 reverse(0, len(a) - k - 1) # 时间复杂度 （len(a) - k）/2
 reverse(len(a) - k , len(a) - 1) # 时间复杂度 （k）/2
-reverse(0, len(a) - 1)
+reverse(0, len(a) - 1) # 时间复杂度 （len(a)）/2
 print(a)
 
-# 时间复杂度 
-n-k k n 
+# 总体时间复杂度 O（len(a)）=O（N）
