@@ -1,9 +1,9 @@
-import numpy as np
+import numpy as np # 生成随机数组
 
 a = np.random.randint(1000, size=100)
 
 k = 15
-k %= len(a)
+k %= len(a) # 防止溢出
 
 print(a)
 
