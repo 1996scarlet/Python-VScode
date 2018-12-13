@@ -50,3 +50,5 @@ def spades_high(card):
 v1 = Vector(2, 4)
 v2 = Vector(2, 1)
 print(v1 + v2)
+
+

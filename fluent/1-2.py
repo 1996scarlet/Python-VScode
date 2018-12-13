@@ -27,7 +27,7 @@ class Vector:
 v1 = Vector(2, 4)
 v2 = Vector(2, 1)
 
-print(abs(v1 + v2), repr(v1 + v2))
+# print(abs(v1 + v2), repr(v1 + v2))
 
 symbols = '$¢£¥€¤'
 codes = []
@@ -35,4 +35,9 @@ codes = []
 for symbol in symbols:
     codes.append(ord(symbol))
 
-print(codes)
+# print(codes)
+
+t = (20, 8)
+
+# print(divmod(*t))
+
